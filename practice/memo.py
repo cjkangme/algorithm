@@ -1,18 +1,22 @@
-N = int(input())
+import sys
+input = sys.stdin.readline
+
+T = int(input())
 cnt = 0
-numbers = list(range(1, N+1))
-for num in numbers:
-    str_num = str(num)
-    if len(str_num) <= 2:
-        cnt += 1
-        continue
-    gap = int(str_num[1]) - int(str_num[0])
-    flag = False
-    for i in range(1, len(str_num)-1):
-        flag = True
-        if int(str_num[i+1]) - int(str_num[i]) != gap:
-            flag = False
-            break
-    if flag == True:
+for t in range(T):
+    string = input()
+    chr_list = []
+    i = 0
+    is_group = True
+    for c in string:
+        if c not in chr_list:
+            chr_list.append(c)
+        else:
+            if string[i-1] == c:
+                pass
+            else:
+                is_group = False
+        i += 1
+    if is_group:
         cnt += 1
 print(cnt)
