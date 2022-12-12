@@ -12,7 +12,7 @@ for num in range(T):
 for i in range(1, len(count_list)):
     count_list[i] += count_list[i-1]
 
-for i in range(len(count_list[i])):
+for i in range(len(count_list)):
     if i == 0:
         for _ in range(count_list[i]):
             print(i)
