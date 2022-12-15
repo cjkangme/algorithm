@@ -2,9 +2,6 @@
 import sys
 from collections import deque
 
-import sys
-from collections import deque
-
 input = sys.stdin.readline
 
 string = input().rstrip()
