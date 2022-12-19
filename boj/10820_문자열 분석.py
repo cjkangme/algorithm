@@ -19,4 +19,4 @@ if __name__=="__main__":
                     answer[3] += 1
             print(*answer)
         except:
-            sys.exit(0)
+            break
